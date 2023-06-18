@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    @keyframes slideIn {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    header {
+      background-color: #007bff;
+      padding: 20px;
+      text-align: center;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 36px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    p {
+      color: #ffffff;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NTMS Training Institute</h1>
+    <p>Host: <span id="hostname"></span></p>
+  </header>
+
+  <script>
+    document.getElementById("hostname").textContent = window.location.hostname;
+  </script>
+</body>
+</html>
